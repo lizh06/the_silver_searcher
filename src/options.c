@@ -370,7 +370,7 @@ void parse_options(int argc, char **argv, char **base_paths[], char **paths[]) {
             /* Fall through and build regex */
             case 'G':
                 if (opts.casing == CASE_DEFAULT) {
-                    opts.casing = CASE_SENSITIVE;
+                    opts.casing = CASE_SMART;
                 }
                 if (opts.casing != CASE_SENSITIVE) {
                     pcre_opts |= PCRE_CASELESS;
