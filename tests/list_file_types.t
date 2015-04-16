@@ -25,7 +25,7 @@ Language types are output:
         .cfc  .cfm  .cfml
   
     --clojure
-        .clj  .cljs  .cljx
+        .clj  .cljs  .cljc  .cljx
   
     --coffee
         .coffee
@@ -41,6 +41,9 @@ Language types are output:
   
     --delphi
         .pas  .int  .dfm  .nfm  .dof  .dpk  .dproj  .groupproj  .bdsgroup  .bdsproj
+  
+    --ebuild
+        .ebuild  .eclass
   
     --elisp
         .el
@@ -117,6 +120,9 @@ Language types are output:
     --matlab
         .m
   
+    --mathematica
+        .m  .wl
+  
     --mercury
         .m  .moo
   
@@ -144,6 +150,9 @@ Language types are output:
     --plone
         .pt  .cpt  .metadata  .cpy  .py
   
+    --puppet
+        .pp
+  
     --python
         .py
   
@@ -152,6 +161,9 @@ Language types are output:
   
     --rs
         .rs
+  
+    --r
+        .R  .Rmd  .Rnw  .Rtex  .Rrst
   
     --ruby
         .rb  .rhtml  .rjs  .rxml  .erb  .rake  .spec
@@ -200,6 +212,9 @@ Language types are output:
   
     --vb
         .bas  .cls  .frm  .ctl  .vb  .resx
+  
+    --velocity
+        .vm
   
     --verilog
         .v  .vh  .sv
