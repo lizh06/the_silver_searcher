@@ -54,6 +54,9 @@ Language types are output:
     --fortran
         .f  .f77  .f90  .f95  .f03  .for  .ftn  .fpp
   
+    --fsharp
+        .fs  .fsi  .fsx
+  
     --gettext
         .po  .pot  .mo
   
@@ -126,6 +129,9 @@ Language types are output:
     --mercury
         .m  .moo
   
+    --nim
+        .nim
+  
     --objc
         .m  .h
   
@@ -146,6 +152,9 @@ Language types are output:
   
     --php
         .php  .phpt  .php3  .php4  .php5  .phtml
+  
+    --pike
+        .pike  .pmod
   
     --plone
         .pt  .cpt  .metadata  .cpy  .py
