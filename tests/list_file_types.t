@@ -48,6 +48,9 @@ Language types are output:
     --elisp
         .el
   
+    --elixir
+        .ex  .exs
+  
     --erlang
         .erl  .hrl
   
@@ -197,6 +200,9 @@ Language types are output:
   
     --smalltalk
         .st
+  
+    --sml
+        .sml  .fun  .mlb  .sig
   
     --sql
         .sql  .ctl
