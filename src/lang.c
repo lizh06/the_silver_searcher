@@ -9,6 +9,8 @@ lang_spec_t langs[] = {
     { "ada", { "ada", "adb", "ads" } },
     { "asm", { "asm", "s" } },
     { "batch", { "bat", "cmd" } },
+    { "bitbake", { "bb", "bbappend", "bbclass", "inc" } },
+    { "bro", { "bro", "bif" } },
     { "cc", { "c", "h", "xs" } },
     { "cfmx", { "cfc", "cfm", "cfml" } },
     { "clojure", { "clj", "cljs", "cljc", "cljx" } },

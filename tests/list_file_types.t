@@ -18,6 +18,12 @@ Language types are output:
     --batch
         .bat  .cmd
   
+    --bitbake
+        .bb  .bbappend  .bbclass  .inc
+  
+    --bro
+        .bro  .bif
+  
     --cc
         .c  .h  .xs
   
