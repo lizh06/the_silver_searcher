@@ -108,6 +108,9 @@ Language types are output:
     --jsp
         .jsp  .jspx  .jhtm  .jhtml
   
+    --julia
+        .jl
+  
     --less
         .less
   
@@ -172,7 +175,7 @@ Language types are output:
         .pike  .pmod
   
     --plone
-        .pt  .cpt  .metadata  .cpy  .py
+        .pt  .cpt  .metadata  .cpy  .py  .xml  .zcml
   
     --puppet
         .pp
@@ -269,6 +272,9 @@ Language types are output:
   
     --vim
         .vim
+  
+    --wix
+        .wxi  .wxs
   
     --wsdl
         .wsdl
