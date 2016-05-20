@@ -87,7 +87,9 @@ or
 
         pkg_add the_silver_searcher
 
+### Cygwin
 
+Run the relevant [`setup-*.exe`](https://cygwin.com/install.html), and select "the\_silver\_searcher" in the "Utils" category.
 
 ## Building from source
 
@@ -115,9 +117,9 @@ or
 
         ./build.sh
 
-  On Windows:
+  On Windows (inside an msys/MinGW shell):
 
-        mingw32-make -f Makefile.w32
+        make -f Makefile.w32
 3. Make install:
 
         sudo make install
