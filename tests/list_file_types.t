@@ -30,6 +30,9 @@ Language types are output:
     --cfmx
         .cfc  .cfm  .cfml
   
+    --chpl
+        .chpl
+  
     --clojure
         .clj  .cljs  .cljc  .cljx
   
@@ -48,6 +51,9 @@ Language types are output:
     --css
         .css
   
+    --cython
+        .pyx  .pxd  .pxi
+  
     --delphi
         .pas  .int  .dfm  .nfm  .dof  .dpk  .dproj  .groupproj  .bdsgroup  .bdsproj
   
@@ -58,10 +64,13 @@ Language types are output:
         .el
   
     --elixir
-        .ex  .exs
+        .ex  .eex  .exs
   
     --erlang
         .erl  .hrl
+  
+    --factor
+        .factor
   
     --fortran
         .f  .f77  .f90  .f95  .f03  .for  .ftn  .fpp
@@ -100,7 +109,7 @@ Language types are output:
         .java  .properties
   
     --js
-        .js  .jsx
+        .js  .jsx  .vue
   
     --json
         .json
@@ -110,6 +119,9 @@ Language types are output:
   
     --julia
         .jl
+  
+    --kotlin
+        .kt
   
     --less
         .less
@@ -223,7 +235,7 @@ Language types are output:
         .scm  .ss
   
     --shell
-        .sh  .bash  .csh  .tcsh  .ksh  .zsh
+        .sh  .bash  .csh  .tcsh  .ksh  .zsh  .fish
   
     --smalltalk
         .st
