@@ -28,9 +28,11 @@ const char *evil_hardcoded_ignore_files[] = {
     NULL
 };
 
-/* Warning: changing the first string will break skip_vcs_ignores. */
+/* Warning: changing the first two strings will break skip_vcs_ignores. */
 const char *ignore_pattern_files[] = {
+    /* Warning: .agignore will one day be removed in favor of .ignore */
     ".agignore",
+    ".ignore",
     ".gitignore",
     ".git/info/exclude",
     ".hgignore",
@@ -367,7 +369,7 @@ int filename_filter(const char *path, const struct dirent *dir, void *baton) {
         return 0;
     }
 
-    if (opts.search_all_files && !opts.path_to_agignore) {
+    if (opts.search_all_files && !opts.path_to_ignore) {
         return 1;
     }
 
@@ -393,20 +395,23 @@ int filename_filter(const char *path, const struct dirent *dir, void *baton) {
         }
     }
 
-/* TODO: don't call strlen on filename every time we call filename_filter() */
 #ifdef HAVE_DIRENT_DNAMLEN
     size_t filename_len = dir->d_namlen;
 #else
-    size_t filename_len = strlen(filename);
+    size_t filename_len = 0;
 #endif
+
+    if (strncmp(filename, "./", 2) == 0) {
+#ifndef HAVE_DIRENT_DNAMLEN
+        filename_len = strlen(filename);
+#endif
+        filename++;
+        filename_len--;
+    }
+
     const ignores *ig = scandir_baton->ig;
 
     while (ig != NULL) {
-        if (strncmp(filename, "./", 2) == 0) {
-            filename++;
-            filename_len--;
-        }
-
         if (extension) {
             int match_pos = binary_search(extension, ig->extensions, 0, ig->extensions_len);
             if (match_pos >= 0) {
@@ -419,13 +424,20 @@ int filename_filter(const char *path, const struct dirent *dir, void *baton) {
             return 0;
         }
 
-        if (is_directory(path, dir) && filename[filename_len - 1] != '/') {
-            char *temp;
-            ag_asprintf(&temp, "%s/", filename);
-            int rv = path_ignore_search(ig, path_start, temp);
-            free(temp);
-            if (rv) {
-                return 0;
+        if (is_directory(path, dir)) {
+#ifndef HAVE_DIRENT_DNAMLEN
+            if (!filename_len) {
+                filename_len = strlen(filename);
+            }
+#endif
+            if (filename[filename_len - 1] != '/') {
+                char *temp;
+                ag_asprintf(&temp, "%s/", filename);
+                int rv = path_ignore_search(ig, path_start, temp);
+                free(temp);
+                if (rv) {
+                    return 0;
+                }
             }
         }
         ig = ig->parent;

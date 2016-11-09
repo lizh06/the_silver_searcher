@@ -15,7 +15,7 @@ Do you know C? I invite you to pair with me to [help me get to Ag 1.0](http://ge
 
 * It is an order of magnitude faster than `ack`.
 * It ignores file patterns from your `.gitignore` and `.hgignore`.
-* If there are files in your source repo you don't want to search, just add their patterns to a `.agignore` file. (\*cough\* extern \*cough\*)
+* If there are files in your source repo you don't want to search, just add their patterns to a `.ignore` file. (\*cough\* `*.min.js` \*cough\*)
 * The command name is 33% shorter than `ack`, and all keys are on the home row!
 
 Ag is quite stable now. Most changes are new features, minor bug fixes, or performance improvements. It's much faster than Ack in my benchmarks:
@@ -64,8 +64,7 @@ or
         dnf install the_silver_searcher
 * RHEL7+
 
-        rpm -Uvh http://download.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
-        yum install the_silver_searcher
+        yum install epel-release.noarch the_silver_searcher
 * Gentoo
 
         emerge the_silver_searcher
@@ -158,7 +157,7 @@ There's also a fork of ack.vim tailored for use with Ag: [ag.vim][]
 
 ### Emacs
 
-You can use [ag.el][] as an Emacs fronted to Ag. See also: [helm-ag].
+You can use [ag.el][] as an Emacs front-end to Ag. See also: [helm-ag].
 
 [ag.el]: https://github.com/Wilfred/ag.el
 [helm-ag]: https://github.com/syohex/emacs-helm-ag
@@ -170,9 +169,9 @@ TextMate users can use Ag with [my fork](https://github.com/ggreer/AckMate) of t
 ## Other stuff you might like
 
 * [Ack](https://github.com/petdance/ack2) - Better than grep. Without Ack, Ag would not exist.
-* [AckMate](https://github.com/protocool/AckMate) - An ack-powered replacement for TextMate's slow built-in search.
 * [ack.vim](https://github.com/mileszs/ack.vim)
 * [ag.vim]( https://github.com/rking/ag.vim)
 * [Exuberant Ctags](http://ctags.sourceforge.net/) - Faster than Ag, but it builds an index beforehand. Good for *really* big codebases.
 * [Git-grep](http://git-scm.com/docs/git-grep) - As fast as Ag but only works on git repos.
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [Sack](https://github.com/sampson-chen/sack) - A utility that wraps Ack and Ag. It removes a lot of repetition from searching and opening matching files.
