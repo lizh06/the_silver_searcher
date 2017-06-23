@@ -66,6 +66,9 @@ Language types are output:
     --elixir
         .ex  .eex  .exs
   
+    --elm
+        .elm
+  
     --erlang
         .erl  .hrl
   
@@ -96,6 +99,9 @@ Language types are output:
     --haskell
         .hs  .lhs
   
+    --haxe
+        .hx
+  
     --hh
         .h
   
@@ -112,13 +118,13 @@ Language types are output:
         .java  .properties
   
     --js
-        .js  .jsx  .vue
+        .es6  .js  .jsx  .vue
   
     --json
         .json
   
     --jsp
-        .jsp  .jspx  .jhtm  .jhtml
+        .jsp  .jspx  .jhtm  .jhtml  .jspf  .tag  .tagf
   
     --julia
         .jl
@@ -275,6 +281,9 @@ Language types are output:
   
     --ts
         .ts  .tsx
+  
+    --twig
+        .twig
   
     --vala
         .vala  .vapi
